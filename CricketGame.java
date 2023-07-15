@@ -4,15 +4,23 @@ import java.util.Random;
 public class CricketGame {
 
 	public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
             
-            Random random = new Random();
+        Random random = new Random();
+        int decisiongame = 1;
+
+        while (decisiongame==1){
             int randomnumber;
 
             int point1 = 1;
             int score1 = 0;
             int round1 = 0;
 
+            System.out.print("Enter 1 to START the game or 0 to EXIT: ");
+            decisiongame = sc.nextInt();
+            if (decisiongame == 0){
+                break;
+            }
         
             System.out.print("Enter 1st player name: ");
             String player1 = sc.next();
@@ -84,6 +92,6 @@ public class CricketGame {
             }
 
         }
-    
+    }
 
 }
